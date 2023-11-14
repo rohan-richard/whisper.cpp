@@ -21,7 +21,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
             "max_new_tokens": 1000
     ]
     private var Elevenlabs_API_key = "KEY"
-    private var v_id = "gatbLVODbNLqoIAy6Wga"
+    private var v_id = "S6JMST0dI5MnHb6gPvFI"
     
     private var modelUrl: URL? {
         Bundle.main.url(forResource: "ggml-base", withExtension: "bin", subdirectory: "models")
