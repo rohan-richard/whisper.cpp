@@ -8,14 +8,6 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    Button("Transcribe", action: {
-                        Task {
-                            await whisperState.transcribeSample()
-                        }
-                    })
-                    .buttonStyle(.bordered)
-                    .disabled(!whisperState.canTranscribe)
-                    
                     Button(whisperState.isRecording ? "Stop recording" : "Start recording", action: {
                         Task {
                             await whisperState.toggleRecord()
@@ -30,7 +22,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
-            .navigationTitle("Whisper SwiftUI Demo")
+            .navigationTitle("AI Voice Chat")
             .padding()
         }
     }

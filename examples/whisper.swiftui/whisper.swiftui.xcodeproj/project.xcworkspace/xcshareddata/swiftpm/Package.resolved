@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ElevenlabsSwift",
+        "repositoryURL": "https://github.com/ArchieGoodwin/ElevenlabsSwift",
+        "state": {
+          "branch": null,
+          "revision": "46913d689503d4d88793d9ae180d0d437438175f",
+          "version": "0.7.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -18,6 +18,7 @@
 		0AAC5DCE2953A05C003032C3 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DCD2953A05C003032C3 /* WhisperState.swift */; };
 		0AAC5DD12953A394003032C3 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DD02953A394003032C3 /* LibWhisper.swift */; };
 		E3F92DC52AFA8E3800A6A9D4 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = E3F92DC42AFA8E3800A6A9D4 /* whisper */; };
+		EE96C5A22B01EBD800C091CD /* ElevenlabsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE96C5A12B01EBD800C091CD /* ElevenlabsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F92DC52AFA8E3800A6A9D4 /* whisper in Frameworks */,
+				EE96C5A22B01EBD800C091CD /* ElevenlabsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 			name = whisper.swiftui;
 			packageProductDependencies = (
 				E3F92DC42AFA8E3800A6A9D4 /* whisper */,
+				EE96C5A12B01EBD800C091CD /* ElevenlabsSwift */,
 			);
 			productName = WhisperCppDemo;
 			productReference = 0AAC5D9729539CCF003032C3 /* whisper.swiftui.app */;
@@ -187,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 0AAC5D8E29539CCF003032C3;
+			packageReferences = (
+				EE96C5A02B01EBD800C091CD /* XCRemoteSwiftPackageReference "ElevenlabsSwift" */,
+			);
 			productRefGroup = 0AAC5D9829539CCF003032C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,10 +354,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whisper.swiftui.demo/Supporting files/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9UW8BXD6T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Needed to transcribe audio";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -367,14 +374,15 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whispercppdemo.WhisperCppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whispercppdemo.WhisperCppdemoamgx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,10 +396,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whisper.swiftui.demo/Supporting files/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S9UW8BXD6T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Needed to transcribe audio";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -412,13 +421,14 @@
 					"-O3",
 					"-DNDEBUG",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.whispercppdemo.WhisperCppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whispercppdemo.WhisperCppdemoamgx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -445,10 +455,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		EE96C5A02B01EBD800C091CD /* XCRemoteSwiftPackageReference "ElevenlabsSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArchieGoodwin/ElevenlabsSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		E3F92DC42AFA8E3800A6A9D4 /* whisper */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = whisper;
+		};
+		EE96C5A12B01EBD800C091CD /* ElevenlabsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE96C5A02B01EBD800C091CD /* XCRemoteSwiftPackageReference "ElevenlabsSwift" */;
+			productName = ElevenlabsSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
