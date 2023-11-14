@@ -20,7 +20,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
             "return_full_text": false,
             "max_new_tokens": 1000
     ]
-    private var Elevenlabs_API_key = "18649fed33aacf4ad0d14efc8516db8e"
+    private var Elevenlabs_API_key = "KEY"
     private var v_id = "gatbLVODbNLqoIAy6Wga"
     
     private var modelUrl: URL? {
