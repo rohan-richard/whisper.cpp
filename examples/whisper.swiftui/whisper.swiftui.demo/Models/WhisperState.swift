@@ -20,7 +20,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
             "return_full_text": false,
             "max_new_tokens": 1000
     ]
-    private var Elevenlabs_API_key = "KEY"
+    private var Elevenlabs_API_key = "YOUR_KEY"
     private var v_id = "S6JMST0dI5MnHb6gPvFI"
     
     private var modelUrl: URL? {
@@ -66,6 +66,9 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     }
     
     private func getVoiceResponse(text: String) async {
+        let optimizationLevel = 3
+
+        let apiUrlString = "https://api.elevenlabs.io/v1/text-to-speech/\(v_id)/stream-input?model_id=ggml-base&optimize_streaming_latency=\(optimizationLevel)"
         
         let elevenApi = ElevenlabsSwift(elevenLabsAPI: Elevenlabs_API_key)
         do {
